@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout git') {
             steps {
-                git(url: 'https://github.com/MHabiib/SimpleAutomation.git', branch: 'master')
+                git(url: 'https://github.com/MHabiib/SimpleAutomation2.git', branch: 'master')
             }
         }
         stage('Running test') {
