@@ -1,0 +1,157 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 14,
+        "name": "when a user checks a non-existent user on github, github would respond \u0027not found\u0027",
+        "description": "",
+        "id": "testing-a-rest-api;when-a-user-checks-a-non-existent-user-on-github--github-would-respond--not-found-;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 209391100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "github user profile api",
+            "match": {
+              "location": "GithubSteps.githubUserProfileApi()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 793700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "a random non-existent username",
+            "match": {
+              "location": "GithubSteps.aRandomNonExistentUsername()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2390530801,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I look for eugenp2 via the api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "eugenp2",
+                  "offset": 11
+                }
+              ],
+              "location": "GithubSteps.iLookForEugenpViaTheApi(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2759699,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "github respond: 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 16
+                }
+              ],
+              "location": "GithubSteps.githubRespondNotFound(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GithubFailed"
+          },
+          {
+            "name": "@Github"
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "when a user checks a non-existent user on github, github would respond \u0027found\u0027",
+        "description": "",
+        "id": "testing-a-rest-api;when-a-user-checks-a-non-existent-user-on-github--github-would-respond--found-;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1744800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "github user profile api",
+            "match": {
+              "location": "GithubSteps.githubUserProfileApi()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 395173801,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I look for mhabiib via the api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "mhabiib",
+                  "offset": 11
+                }
+              ],
+              "location": "GithubSteps.iLookForEugenpViaTheApi(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 642700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "github respond: 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 16
+                }
+              ],
+              "location": "GithubSteps.githubRespondNotFound(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GithubSuccess"
+          },
+          {
+            "name": "@Github"
+          }
+        ]
+      }
+    ],
+    "name": "Testing a REST API",
+    "description": "  As a user\n  I want to look up a non-existent user\u0027s profile on github\n  So that I can be sure that the username can not be found on github",
+    "id": "testing-a-rest-api",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Github.feature",
+    "tags": []
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "errorMessage": {
+      "type": "string"
+    },
+    "content": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": [
+          "id",
+          "projectName",
+          "jiraKey",
+          "testlinkKey",
+          "labelBugProduction",
+          "enable",
+          "minDDPYellow",
+          "minDDPGreen",
+          "minACYellow",
+          "minACGreen",
+          "createdBy",
+          "createdDate",
+          "timestamp"
+        ],
+        "properties": {
+          "id": {
+            "type": ["number","null"]
+          },
+          "projectName": {
+            "type": ["string","null"]
+          },
+          "jiraKey": {
+            "type": ["string","null"]
+          },
+          "testlinkKey": {
+            "type": ["string","null"]
+
+          },
+          "labelBugUat": {},
+          "labelBugProduction": {
+            "type": ["string","null"]
+          },
+          "enable": {
+            "type": ["boolean","null"]
+          },
+          "minDDPYellow": {
+            "type": ["number","null"]
+          },
+          "minDDPGreen": {
+            "type": ["number","null"]
+          },
+          "minACYellow": {
+            "type": ["number","null"]
+          },
+          "minACGreen": {
+            "type": ["number","null"]
+          },
+          "createdBy": {
+            "type": ["string","null"]
+          },
+          "createdDate": {
+            "type": ["number","null"]
+          },
+          "timestamp": {
+            "type": ["number","null"]
+          },
+          "updatedBy": {}
+        }
+      }
+    },
+    "pageMetaData": {
+      "type": "object",
+      "properties": {
+        "pageSize": {
+          "type": "number"
+        },
+        "pageNumber": {
+          "type": "number"
+        },
+        "total": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "pageSize",
+        "pageNumber",
+        "total"
+      ]
+    }
+  },
+  "required": [
+    "success",
+    "errorMessage",
+    "content",
+    "pageMetaData"
+  ]
+}
